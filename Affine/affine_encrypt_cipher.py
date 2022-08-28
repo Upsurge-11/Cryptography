@@ -9,12 +9,17 @@ def affine_encrypt(text, key):
     return result
 
 
-plain_text = input("Enter the plain text in here :- ")
-key_pairs = []
+def main():
+    plain_text = input("Enter the plain text in here :- ")
+    key_pairs = []
 
-for i in range(2):
-    n = int(input("Enter the key " + str(i) + " :- "))
-    key_pairs.append(n)
+    for i in range(2):
+        n = int(input("Enter the key " + str(i) + " :- "))
+        key_pairs.append(n)
 
-encrypted_text = affine_encrypt(plain_text, key_pairs)
-print(encrypted_text)
+    encrypted_text = affine_encrypt(plain_text, key_pairs)
+    print(encrypted_text)
+
+
+if __name__ == "__main__":
+    main()

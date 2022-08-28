@@ -9,8 +9,13 @@ def caesar_encrypt(message, key):
     return result
 
 
-text = input("Enter the string :- ")
-s = int(input("Enter the key :- "))
+def main():
+    text = input("Enter the string :- ")
+    s = int(input("Enter the key :- "))
 
-encrypted_message = caesar_encrypt(text, s)
-print(encrypted_message)
+    encrypted_message = caesar_encrypt(text, s)
+    print(encrypted_message)
+
+
+if __name__ == "__main__":
+    main()

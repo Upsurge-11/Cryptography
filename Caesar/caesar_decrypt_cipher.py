@@ -12,13 +12,18 @@ def caesar_decrypt(text, brute_force_num):
     return result
 
 
-cipher_text = input("Enter the text :- ")
-n = int(input("Enter the range of key to use for brute force :- "))
+def main():
+    cipher_text = input("Enter the text :- ")
+    n = int(input("Enter the range of key to use for brute force :- "))
 
-decrypted_text = caesar_decrypt(cipher_text, n)
+    decrypted_text = caesar_decrypt(cipher_text, n)
 
-shift_key_number = 1
+    shift_key_number = 1
 
-for ans in decrypted_text:
-    print(str(shift_key_number) + ') ', ans)
-    shift_key_number += 1
+    for ans in decrypted_text:
+        print(str(shift_key_number) + ') ', ans)
+        shift_key_number += 1
+
+
+if __name__ == "__main__":
+    main()
